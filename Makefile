@@ -18,7 +18,7 @@ build:
 	make build-frontend
 
 build-frontend:
-	yarn && yarn build
+	yarn
 
 .PHONY: Build Plone 5.2
 build-backend:  ## Build Plone 5.2
@@ -33,9 +33,6 @@ dist:
 
 start-built-frontend: dist
 	yarn start:prod
-
-start-api-docker:
-	docker-compose -f api/docker-compose.yml up
 
 start-backend-docker:
 	docker run --rm -it -p 8080:8080 kitconcept/plone.restapi:latest
