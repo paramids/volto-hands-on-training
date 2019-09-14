@@ -20,6 +20,5 @@ results/
 eslint.xml
 junit.xml
 
-api/src/kitconcept.contentcreator
-api/src/kitconcept.volto/
+omelette
 src/addons/
