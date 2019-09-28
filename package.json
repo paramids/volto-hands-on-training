@@ -1,8 +1,8 @@
 {
-  "name": "volto-starter-kit",
-  "description": "Volto Starter Kit",
+  "name": "volto-hands-on-training",
+  "description": "Volto Hands On Training",
   "license": "MIT",
-  "version": "3.1.0",
+  "version": "1.0.0",
   "scripts": {
     "start": "razzle start",
     "postinstall": "yarn omelette",
@@ -59,7 +59,7 @@
     "node": "^8 || ^10"
   },
   "dependencies": {
-    "@plone/volto": "4.0.0-alpha.0"
+    "@plone/volto": "4.0.0-alpha.4"
   },
   "devDependencies": {
     "eslint-plugin-prettier": "3.0.1",
