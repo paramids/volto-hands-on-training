@@ -19,6 +19,12 @@ import {
   tiles as defaultTiles,
 } from '@plone/volto/config';
 
+import { defineMessages } from 'react-intl';
+
+import MainSliderView from '@package/components/Tiles/MainSlider/View';
+import MainSliderEdit from '@package/components/Tiles/MainSlider/Edit';
+import sliderSVG from '@plone/volto/icons/slider.svg';
+
 export const settings = {
   ...defaultSettings,
 };
@@ -31,6 +37,31 @@ export const widgets = {
   ...defaultWidgets,
 };
 
+defineMessages({
+  mainslider: {
+    id: 'Main Slider',
+    defaultMessage: 'Main Slider',
+  },
+});
+
+const customTiles = {
+  mainslider: {
+    id: 'mainslider',
+    title: 'Main Slider',
+    icon: sliderSVG,
+    group: 'common',
+    view: MainSliderView,
+    edit: MainSliderEdit,
+    restricted: false,
+    mostUsed: true,
+    security: {
+      addPermission: [],
+      view: [],
+    },
+  },
+};
+
 export const tiles = {
   ...defaultTiles,
+  tilesConfig: { ...defaultTiles.tilesConfig, ...customTiles },
 };
