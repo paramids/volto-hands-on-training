@@ -1,3 +1,6 @@
+@import (less) '~slick-carousel/slick/slick.css';
+@import (less) '~slick-carousel/slick/slick-theme.css';
+
 /* Header */
 .ui.basic.segment.header-wrapper {
   border-bottom: 1px solid #939393;
@@ -57,4 +60,117 @@
 .siteroot .ui.secondary.segment.breadcrumbs,
 .section-edit .ui.secondary.segment.breadcrumbs {
   display: none;
+}
+
+/* Main Slider */
+.tile.view.mainslider {
+  .slide {
+    height: 339px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    color: #fff;
+
+    h1 {
+      font-size: 32px;
+      font-weight: 700;
+      text-align: center;
+      margin: 0 0 20px 0;
+    }
+
+    h3 {
+      font-size: 32px;
+      font-weight: 300;
+      margin: 0 0 20px 0;
+    }
+
+    a {
+      padding: 10px 20px;
+      background-color: #00bef1;
+      color: #fff;
+      border-radius: 20px;
+    }
+  }
+
+  .slick-arrow {
+    height: initial;
+    width: initial;
+  }
+
+  .slick-prev {
+    left: -18px;
+    background: transparent !important;
+    z-index: 10;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  .slick-next {
+    right: -32px;
+    background: transparent !important;
+
+    &::before {
+      display: none;
+    }
+  }
+}
+
+body.has-toolbar .tile.view.mainslider .slick-prev {
+  left: calc(-18px + 80px);
+}
+
+body.has-toolbar .tile.view.mainslider .slick-next {
+  right: calc(80px - 38px);
+}
+
+.slick-slider {
+  // This fixes homepage slider problem in ff (prevents from totally disappearing)
+  width: 100vw;
+
+  img {
+    width: 100%;
+  }
+}
+
+body:not(.has-toolbar):not(.has-sidebar):not(.has-toolbar-collapsed):not(.has-sidebar-collapsed)
+  .ui.wrapper
+  > .full-width,
+body.has-toolbar:not(.has-sidebar):not(.has-sidebar-collapsed)
+  .ui.wrapper
+  > .full-width,
+body.has-toolbar-collapsed:not(.has-sidebar):not(.has-sidebar-collapsed)
+  .ui.wrapper
+  > .full-width {
+  left: 50%;
+  margin-left: -50vw !important;
+  margin-right: -50vw !important;
+  position: relative;
+  right: 50%;
+  width: 100vw !important;
+  max-width: initial !important;
+}
+
+/* width hack */
+body.has-toolbar:not(.has-sidebar):not(.has-sidebar-collapsed)
+  .ui.wrapper
+  > .tile.view2.mainslider,
+body .ui.wrapper > .tile.view2.mainslider,
+body.has-toolbar.has-sidebar .ui.wrapper > .ui.inner .tile.view2.mainslider,
+body.has-toolbar-collapsed.has-sidebar
+  .ui.wrapper
+  > .ui.inner
+  .tile.view2.mainslider,
+body.has-toolbar-collapsed.has-sidebar-collapsed
+  .ui.wrapper
+  > .ui.inner
+  .tile.view2.mainslider,
+body.has-toolbar.has-sidebar-collapsed
+  .ui.wrapper
+  > .ui.inner
+  .tile.view2.mainslider {
+  width: 100% !important;
 }

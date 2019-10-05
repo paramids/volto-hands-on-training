@@ -6,20 +6,8 @@
 import React from 'react';
 import { Container, List, Segment } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
-import {
-  FormattedMessage,
-  defineMessages,
-  injectIntl,
-  intlShape,
-} from 'react-intl';
+import { FormattedMessage, injectIntl } from 'react-intl';
 import { Logo } from '@plone/volto/components';
-
-const messages = defineMessages({
-  copyright: {
-    id: 'Copyright',
-    defaultMessage: 'Copyright',
-  },
-});
 
 /**
  * Component to display the footer.
@@ -75,17 +63,5 @@ const Footer = ({ intl }) => (
     </Container>
   </Segment>
 );
-
-/**
- * Property types.
- * @property {Object} propTypes Property types.
- * @static
- */
-Footer.propTypes = {
-  /**
-   * i18n object
-   */
-  intl: intlShape.isRequired,
-};
 
 export default injectIntl(Footer);
