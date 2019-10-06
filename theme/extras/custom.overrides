@@ -69,50 +69,49 @@
 
 /* Main Slider */
 .ui.basic.segment.content-area {
-  margin: 0;
   padding: 0;
+  margin: 0;
 }
 
 .tile.view.mainslider {
   .slide {
-    height: 339px;
     display: flex;
-    justify-content: center;
+    height: 339px;
     flex-direction: column;
     align-items: center;
-
+    justify-content: center;
     color: #fff;
 
     h1 {
+      margin: 0 0 20px 0;
       font-size: 32px;
       font-weight: 700;
       text-align: center;
-      margin: 0 0 20px 0;
     }
 
     h3 {
+      margin: 0 0 20px 0;
       font-size: 32px;
       font-weight: 300;
-      margin: 0 0 20px 0;
     }
 
     a {
       padding: 10px 20px;
       background-color: #00bef1;
-      color: #fff;
       border-radius: 20px;
+      color: #fff;
     }
   }
 
   .slick-arrow {
-    height: initial;
     width: initial;
+    height: initial;
   }
 
   .slick-prev {
+    z-index: 10;
     left: -18px;
     background: transparent !important;
-    z-index: 10;
 
     &::before {
       display: none;
@@ -148,21 +147,21 @@ body.has-toolbar .tile.view.mainslider .slick-next {
 
 // This is the width hack
 body:not(.has-toolbar):not(.has-sidebar):not(.has-toolbar-collapsed):not(.has-sidebar-collapsed)
-  .ui.wrapper
-  > .full-width,
+.ui.wrapper
+> .full-width,
 body.has-toolbar:not(.has-sidebar):not(.has-sidebar-collapsed)
-  .ui.wrapper
-  > .full-width,
+.ui.wrapper
+> .full-width,
 body.has-toolbar-collapsed:not(.has-sidebar):not(.has-sidebar-collapsed)
-  .ui.wrapper
-  > .full-width {
-  left: 50%;
-  margin-left: -50vw !important;
-  margin-right: -50vw !important;
+.ui.wrapper
+> .full-width {
   position: relative;
   right: 50%;
+  left: 50%;
   width: 100vw !important;
   max-width: initial !important;
+  margin-right: -50vw !important;
+  margin-left: -50vw !important;
 }
 
 /* Success Story */
@@ -173,10 +172,10 @@ body.has-toolbar-collapsed:not(.has-sidebar):not(.has-sidebar-collapsed)
 
   h1.documentFirstHeading {
     margin-bottom: 0;
-    line-height: 1.25em;
-    color: #00608c;
     border: none;
+    color: #00608c;
     font-size: 4.5em;
+    line-height: 1.25em;
 
     &::before {
       display: none;
