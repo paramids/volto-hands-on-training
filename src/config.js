@@ -23,6 +23,7 @@ import { defineMessages } from 'react-intl';
 
 import MainSliderView from '@package/components/Tiles/MainSlider/View';
 import MainSliderEdit from '@package/components/Tiles/MainSlider/Edit';
+import SuccessStory from '@package/components/Views/SuccessStory';
 import sliderSVG from '@plone/volto/icons/slider.svg';
 
 export const settings = {
@@ -31,6 +32,10 @@ export const settings = {
 
 export const views = {
   ...defaultViews,
+  contentTypesViews: {
+    ...defaultViews.contentTypesViews,
+    success_story: SuccessStory,
+  },
 };
 
 export const widgets = {
@@ -63,5 +68,6 @@ const customTiles = {
 
 export const tiles = {
   ...defaultTiles,
+  requiredTiles: [],
   tilesConfig: { ...defaultTiles.tilesConfig, ...customTiles },
 };

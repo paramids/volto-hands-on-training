@@ -1,6 +1,11 @@
 @import (less) '~slick-carousel/slick/slick.css';
 @import (less) '~slick-carousel/slick/slick-theme.css';
 
+/* Global */
+.ui.container.messages {
+  display: none;
+}
+
 /* Header */
 .ui.basic.segment.header-wrapper {
   border-bottom: 1px solid #939393;
@@ -63,6 +68,11 @@
 }
 
 /* Main Slider */
+.ui.basic.segment.content-area {
+  margin: 0;
+  padding: 0;
+}
+
 .tile.view.mainslider {
   .slide {
     height: 339px;
@@ -136,6 +146,7 @@ body.has-toolbar .tile.view.mainslider .slick-next {
   }
 }
 
+// This is the width hack
 body:not(.has-toolbar):not(.has-sidebar):not(.has-toolbar-collapsed):not(.has-sidebar-collapsed)
   .ui.wrapper
   > .full-width,
@@ -154,23 +165,25 @@ body.has-toolbar-collapsed:not(.has-sidebar):not(.has-sidebar-collapsed)
   max-width: initial !important;
 }
 
-/* width hack */
-body.has-toolbar:not(.has-sidebar):not(.has-sidebar-collapsed)
-  .ui.wrapper
-  > .tile.view2.mainslider,
-body .ui.wrapper > .tile.view2.mainslider,
-body.has-toolbar.has-sidebar .ui.wrapper > .ui.inner .tile.view2.mainslider,
-body.has-toolbar-collapsed.has-sidebar
-  .ui.wrapper
-  > .ui.inner
-  .tile.view2.mainslider,
-body.has-toolbar-collapsed.has-sidebar-collapsed
-  .ui.wrapper
-  > .ui.inner
-  .tile.view2.mainslider,
-body.has-toolbar.has-sidebar-collapsed
-  .ui.wrapper
-  > .ui.inner
-  .tile.view2.mainslider {
-  width: 100% !important;
+/* Success Story */
+.contenttype-success_story {
+  .ui.secondary.vertical.segment.breadcrumbs {
+    display: none;
+  }
+
+  h1.documentFirstHeading {
+    margin-bottom: 0;
+    line-height: 1.25em;
+    color: #00608c;
+    border: none;
+    font-size: 4.5em;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  .lead.image {
+    width: 100%;
+  }
 }
