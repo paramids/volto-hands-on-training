@@ -1122,10 +1122,10 @@
     universal-user-agent "^3.0.0"
     url-template "^2.0.8"
 
-"@plone/volto@4.0.0-alpha.8":
-  version "4.0.0-alpha.8"
-  resolved "https://registry.yarnpkg.com/@plone/volto/-/volto-4.0.0-alpha.8.tgz#6045fece6728764a22674d27877e595558408343"
-  integrity sha512-lnzMq4Vs1VmOaXXPwiiHx/sdfL3OL3WPRwF5zsW9k0yod6W7sHeRHsmSlTkCwkz5hl0U14vNY8DWcMMEfwp2lQ==
+"@plone/volto@4.0.0-alpha.9":
+  version "4.0.0-alpha.9"
+  resolved "https://registry.yarnpkg.com/@plone/volto/-/volto-4.0.0-alpha.9.tgz#5a3cbf8440ce59275186026488e51c93a4c0472e"
+  integrity sha512-lzFS4UJ755RgOTUOgmlhVlLKXLHs1lp10t73awI+xCvW64T+xyGui2aVQyy0HmHNn+JVDbUWh93S1wDhVih6ig==
   dependencies:
     "@babel/plugin-proposal-decorators" "7.4.0"
     "@babel/plugin-proposal-do-expressions" "7.2.0"
