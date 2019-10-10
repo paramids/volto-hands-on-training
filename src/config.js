@@ -23,6 +23,8 @@ import { defineMessages } from 'react-intl';
 
 import MainSliderViewBlock from '@package/components/Blocks/MainSlider/View';
 import MainSliderEditBlock from '@package/components/Blocks/MainSlider/Edit';
+import HighlightsViewBlock from '@package/components/Blocks/Highlights/View';
+import HighlightsEditBlock from '@package/components/Blocks/Highlights/Edit';
 import SuccessStory from '@package/components/Views/SuccessStory';
 import sliderSVG from '@plone/volto/icons/slider.svg';
 
@@ -57,6 +59,20 @@ const customTiles = {
     group: 'common',
     view: MainSliderViewBlock,
     edit: MainSliderEditBlock,
+    restricted: false,
+    mostUsed: true,
+    security: {
+      addPermission: [],
+      view: [],
+    },
+  },
+  highlights: {
+    id: 'highlights',
+    title: 'Highlights',
+    icon: sliderSVG,
+    group: 'common',
+    view: HighlightsViewBlock,
+    edit: HighlightsEditBlock,
     restricted: false,
     mostUsed: true,
     security: {

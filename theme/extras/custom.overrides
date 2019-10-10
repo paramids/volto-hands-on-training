@@ -185,3 +185,22 @@ body.has-toolbar-collapsed:not(.has-sidebar):not(.has-sidebar-collapsed)
     width: 100%;
   }
 }
+
+/* Highlights */
+.highlight {
+  .highlight-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .highlight-body {
+      display: flex;
+      justify-content: center;
+    }
+
+    h2 {
+      text-align: center;
+      text-transform: uppercase;
+    }
+  }
+}
