@@ -204,3 +204,23 @@ body.has-toolbar-collapsed:not(.has-sidebar):not(.has-sidebar-collapsed)
     }
   }
 }
+
+/* Teaser */
+.teaser-item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+
+  img {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  a {
+    color: @textColor;
+  }
+
+  h3 {
+    margin: 0 0 20px 0;
+  }
+}
