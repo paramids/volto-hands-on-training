@@ -23,6 +23,7 @@ import { defineMessages } from 'react-intl';
 
 import MainSliderViewBlock from '@package/components/Blocks/MainSlider/View';
 import MainSliderEditBlock from '@package/components/Blocks/MainSlider/Edit';
+import SuccessStory from '@package/components/Views/SuccessStory';
 import sliderSVG from '@plone/volto/icons/slider.svg';
 
 export const settings = {
@@ -31,6 +32,10 @@ export const settings = {
 
 export const views = {
   ...defaultViews,
+  contentTypesViews: {
+    ...defaultViews.contentTypesViews,
+    success_story: SuccessStory,
+  },
 };
 
 export const widgets = {

@@ -162,3 +162,26 @@ body.has-toolbar-collapsed:not(.has-sidebar):not(.has-sidebar-collapsed)
   margin-right: -50vw !important;
   margin-left: -50vw !important;
 }
+
+/* Success Story */
+.contenttype-success_story {
+  .ui.basic.segment.header-wrapper {
+    margin: 0;
+  }
+
+  h1.documentFirstHeading {
+    margin-bottom: 0;
+    border: none;
+    color: #00608c;
+    font-size: 4.5em;
+    line-height: 1.25em;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  .lead.image {
+    width: 100%;
+  }
+}
