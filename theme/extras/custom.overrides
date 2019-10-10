@@ -39,3 +39,21 @@
 .siteroot .ui.basic.segment.header-wrapper {
   margin-bottom: 0;
 }
+
+/* Footer */
+.ui.inverted.grey.segment.footer {
+  .ui.image {
+    height: 32px;
+    margin-right: 50px;
+  }
+
+  .footer-inner {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+
+    .ui.horizontal.list a {
+      text-decoration: none;
+    }
+  }
+}
