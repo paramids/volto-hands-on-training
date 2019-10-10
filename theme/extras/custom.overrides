@@ -1,11 +1,6 @@
 @import (less) '~slick-carousel/slick/slick.css';
 @import (less) '~slick-carousel/slick/slick-theme.css';
 
-/* Global */
-.ui.container.messages {
-  display: none;
-}
-
 /* Header */
 .ui.basic.segment.header-wrapper {
   margin-bottom: 20px;
