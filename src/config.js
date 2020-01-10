@@ -16,7 +16,7 @@ import {
   settings as defaultSettings,
   views as defaultViews,
   widgets as defaultWidgets,
-  tiles as defaultTiles,
+  blocks as defaultBlocks,
 } from '@plone/volto/config';
 
 import { defineMessages } from 'react-intl';
@@ -49,7 +49,7 @@ defineMessages({
   },
 });
 
-const customTiles = {
+const customBlocks = {
   mainslider: {
     id: 'mainslider',
     title: 'Main Slider',
@@ -66,8 +66,8 @@ const customTiles = {
   },
 };
 
-export const tiles = {
-  ...defaultTiles,
+export const blocks = {
+  ...defaultBlocks,
   requiredTiles: [],
-  tilesConfig: { ...defaultTiles.tilesConfig, ...customTiles },
+  tilesConfig: { ...defaultBlocks.tilesConfig, ...customBlocks },
 };
