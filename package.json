@@ -79,10 +79,10 @@
     }
   },
   "engines": {
-    "node": "^8 || ^10"
+    "node": "^10 || ^12"
   },
   "dependencies": {
-    "@plone/volto": "4.0.0-alpha.22"
+    "@plone/volto": "4.0.0-alpha.35"
   },
   "devDependencies": {
     "eslint-plugin-prettier": "3.0.1",
