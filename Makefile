@@ -35,7 +35,7 @@ start-built-frontend: dist
 	yarn start:prod
 
 start-backend-docker:
-	docker run --rm -it -p 8080:8080 kitconcept/plone.restapi:latest
+	docker run -it --rm --name=plone -p 8080:8080 -e SITE=Plone -e ADDONS="kitconcept.voltodemo" -e ZCML="kitconcept.voltodemo.cors" plone
 
 start-backend-docker-guillotina:
 	docker-compose -f g-api/docker-compose.yml up -d

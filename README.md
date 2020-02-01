@@ -1,52 +1,60 @@
 ## Documentation
 
-A training on how to create your own website using Volto is available as part of the Plone training at [https://training.plone.org/5/volto/index.html](https://training.plone.org/5/volto/index.html).
+This is the companion repository of the official Volto Hands-on Plone training you can find at [https://training.plone.org/5/volto/index.html](https://training.plone.org/5/volto/index.html).
+In this training you'll learn on how to create your own website using Volto.
 
 ## Quick Start
 
-Below is a list of commands you will probably find useful.
+First get all the requirements installed on your system.
 
-### `yarn start`
+### Prerequisites
 
-Runs the project in development mode.  
-You can view your application at `http://localhost:3000`
+- [Node.js LTS (12.x)](https://nodejs.org/)
+- [Python 3.7.x / 2.7.x](https://python.org/) or
+- [Docker](https://www.docker.com/get-started) (if using the Plone/Guillotina docker images)
 
-The page will reload if you make edits.
+### Create Volto App
 
-### `yarn build`
+Create a new Volto project by using the `create-volto-app` utility.
 
-Builds the app for production to the build folder.
+It will bootstrap a Volto project in a folder of your choice with all the required
+boilerplate to start customizing your Volto site.
 
-The build is minified and the filenames include the hashes.
-Your app is ready to be deployed!
+    $ npm install -g yarn
+    $ npm install -g @plone/create-volto-app
+    $ create-volto-app myvoltoproject
+    $ cd myvoltoproject
 
-### `yarn start:prod`
+Although we install and use `yarn`, the `create-volto-app` tool still needs to be
+installed using `npm -g` because `yarn` has a different implementation of
+global installs.
 
-Runs the compiled app in production.
+### Bootstrap the Plone API backend
 
-You can again view your application at `http://localhost:3000`
+We recommend Plone as backend of choice for Volto.
 
-### `yarn test`
+You can bootstrap a ready Docker Plone container with all the dependencies and ready for Volto use:
 
-Runs the test watcher (Jest) in an interactive mode.
-By default, runs tests related to files changed since the last commit.
-
-### `yarn i18n`
-
-Runs the test i18n runner which extracts all the translation strings and
-generates the needed files.
-
-
-### mr_developer
-
-[mr_developer](https://www.npmjs.com/package/mr-developer) is a great tool
-for developing multiple packages at the same time.
-
-mr_developer should work with this project by using the `--config` config option:
-
-```bash
-mrdeveloper --config=jsconfig.json
+```shell
+$ docker run -it --rm --name=plone -p 8080:8080 -e SITE=Plone -e ADDONS="kitconcept.voltodemo" -e ZCML="kitconcept.voltodemo.cors" plone
 ```
 
-Volto's latest razzle config will pay attention to your jsconfig.json file
-for any customizations.
+or as an alternative if you have experience with Plone and you have all the
+dependencies installed on your system, you can use the supplied buildout in the
+`api` folder by issuing the command:
+
+```shell
+$ make build-backend
+```
+
+### Start Volto
+
+Once inside your Volto project folder:
+
+```shell
+$ yarn start
+```
+
+## Volto Documentation
+
+You can find the (beta) documentation in [http://docs.voltocms.com](http://docs.voltocms.com)
