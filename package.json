@@ -79,10 +79,10 @@
     }
   },
   "engines": {
-    "node": "^8 || ^10"
+    "node": "^10 || ^12"
   },
   "dependencies": {
-    "@plone/volto": "4.0.0-alpha.22",
+    "@plone/volto": "4.0.0-alpha.35",
     "react-slick": "0.25.2",
     "slick-carousel": "1.8.1"
   },
