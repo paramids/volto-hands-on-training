@@ -1,6 +1,6 @@
 ## Documentation
 
-This is the companion repository of the official Volto Hands-on Plone training you can find at [https://training.plone.org/5/volto/index.html](https://training.plone.org/5/volto/index.html).
+This is the companion repository of the official Volto Hands-on Plone training you can find at [https://training.plone.org/5/voltohandson](https://training.plone.org/5/voltohandson).
 In this training you'll learn on how to create your own website using Volto.
 
 ## Quick Start
